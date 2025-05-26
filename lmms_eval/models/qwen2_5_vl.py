@@ -13,8 +13,8 @@ from tqdm import tqdm
 from transformers import (
     AutoProcessor,
     AutoTokenizer,
-    Qwen2_5_VLForConditionalGeneration,
 )
+from lmms_eval.transformers import Qwen2_5_VLForConditionalGeneration
 
 from lmms_eval import utils
 from lmms_eval.api.instance import Instance
@@ -45,7 +45,7 @@ class Qwen2_5_VL(lmms):
         use_flash_attention_2: Optional[bool] = False,
         min_pixels: int = 256 * 28 * 28,
         max_pixels: int = 1605632,
-        max_num_frames: int = 32,
+        max_num_frames: int = 100,
         use_custom_video_loader: Optional[bool] = False,
         fps: Optional[float] = None,  # Only applicable if use_custom_video_loader is True
         max_image_size: Optional[int] = None,  # Only applicable if use_custom_video_loader is True

@@ -1,8 +1,7 @@
-dataset_path: nyu-visionx/VSI-Bench
+dataset_path: /root/autodl-tmp/VSI-Bench
 dataset_kwargs:
   token: True
-  cache_dir: vsibench
-  video: True
+  cache_dir: /root/autodl-tmp/VSI-Bench
 task: vsibench
 test_split: test
 output_type: generate_until
